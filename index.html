@@ -1,0 +1,106 @@
+import streamlit as st
+
+def main():
+    st.set_page_config(page_title='Ocuscan', page_icon='https://i.ibb.co/FXxcnK4/logo.png')
+
+    st.markdown(
+        """
+        <style>
+            .container {
+                max-width: 1000px;
+                padding: 20px;
+            }
+            header {
+                background-color: #333;
+                color: white;
+                padding: 15px 0;
+                text-align: center;
+                position: relative;
+            }
+            .logo img {
+                max-width: 200px;
+            }
+            .navbar {
+                display: inline-block;
+                padding: 0 15%;
+            }
+            .navbar a {
+                color: white;
+                margin: 0 15px;
+                text-decoration: none;
+            }
+            .navbar a:hover {
+                color: #4CAF50;
+            }
+            footer {
+                flex-shrink: 0;
+                background-color: #333;
+                color: white;
+                padding: 15px 0;
+                text-align: center;
+            }
+            img.sample {
+                margin-top: 25px;
+                width: 70%;
+                border-radius: 15px;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <header>
+            <img class="logo" src="https://i.ibb.co/KmFFSNd/logo1.png" alt="logo">
+            <br>
+            <div class="navbar">
+                <a href="" style="position: absolute; right: 55%;">Accueil</a>
+                <a href="#about" style="position: absolute; margin-left: 5%;">À propos</a>
+                <br>
+            </div>
+        </header>
+        """
+        , unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="container">
+            <h2>Prédiction de cancers des yeux</h2>
+            <p>Veuillez télécharger votre image</p>
+
+            # Insérez votre fonction de chargement de fichiers ici
+
+            <div id="loading-overlay" style="display: none;">
+                <img id="loading-image" src="https://i.gifer.com/7plQ.gif" alt="Chargement en cours" />
+            </div>
+
+            # Insérez votre fonction de prédiction et d'affichage de résultats ici
+
+            <h3 id="about">À propos de notre service</h3>
+            <p>Notre entreprise s'engage fermement à utiliser la technologie de pointe pour lutter contre le cancer oculaire, en développant un modèle de prédiction basé sur l'analyse d'images. Cette avancée technologique représente une étape cruciale dans la détection précoce et la prévention de cette maladie potentiellement dévastatrice.
+                <br><br>
+                Notre modèle de prédiction a été élaboré avec un soin méticuleux, en utilisant une base de données massive comprenant des milliers d'images de cas de cancer oculaire, couvrant une variété de types et de stades de la maladie.
+                Cette démarche nous a permis d'assurer une précision maximale dans les résultats de nos prédictions.</p>
+            <img class="sample" src="https://i.ibb.co/VwHkWCM/img1.jpg" alt="">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <footer>
+            <div class="footer-content">
+                <img src="https://i.ibb.co/KmFFSNd/logo1.png" alt="logo" style="width: 10%;">
+                <p>© 2023 - Ocuscan - Data Camp - EFREI Paris </p>
+                <p>Mohammad Darmsy Ladha - Antoine Goulard - Kaci Bouaouli </p> 
+            </div>
+        </footer>
+        """,
+        unsafe_allow_html=True
+    )
+
+if __name__ == '__main__':
+    main()
